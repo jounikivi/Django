@@ -9,8 +9,10 @@ def home(request):
     
     #DATEBASE
     article_obj = Article.objects.get(id=random.id)
-
+    article_queryset = Article.objects.all()
+    
     context = {
+        'object_list': article_queryset,
         'object': article_obj,
         'title': article_obj.title,
         'id': article_obj.id,
