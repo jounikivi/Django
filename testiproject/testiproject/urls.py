@@ -19,6 +19,6 @@ from .import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('articles/4/', views.home),
+    path('articles/<int:id>/', views.home),
     path('', views.home, name='home'),
 ]
