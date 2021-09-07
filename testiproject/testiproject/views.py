@@ -3,7 +3,7 @@ import random
 from articles.models import Article
 from django.template.loader import render_to_string
 
-def home(request, id, *args, **kwargs):
+def home(request, *args, **kwargs):
     name ='jouni' # HARD CODE
     random.id = random.randint(1, 4) # RANDOM
     
