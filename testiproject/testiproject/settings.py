@@ -24,6 +24,7 @@ SECRET_KEY = 'django-insecure-5+d@d03bv2bygl@nhi(4)r=a-@53$y--=b4)8c9gh#h$-6=h)5
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+import os
 
 ALLOWED_HOSTS = []
 
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'articles'
 ]
 
 MIDDLEWARE = [
@@ -54,7 +56,7 @@ ROOT_URLCONF = 'testiproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [ BASE_DIR /'templates' ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
