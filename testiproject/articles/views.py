@@ -3,6 +3,14 @@ from .models import Article
 
 # Create your views here.
 
+def Article_create(request):
+    if request.method== 'POST':
+        title = request.POST.get('title')
+        content = request.POST.get('content')
+        Article.objects.create(title=title, content=content)
+        
+    return render(request, 'articles/create.html')
+
 def Article_search(request):
 
     context ={}

@@ -2,5 +2,11 @@
 
 
 {% block content %}
-djkdlfjdlfkjdsfkjfslkdjfsldkjfslksjfd
+
+<form action="." method="POST">
+    {% csrf_token %}
+    <input type="text" name="title" placeholder="title"/>
+    <textarea name="content" placeholder="content"></textarea>
+    <button type="submit">BUTTON</buttom>
+</form>
 {% endblock content %}
